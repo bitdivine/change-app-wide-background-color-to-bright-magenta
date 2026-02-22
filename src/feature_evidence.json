@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-global-theme-color-tokens-so-the-entire-app-background-uses-a-bright-magenta-color-instead-of-the-current-bright-cyan-in-both-light-and-dark-modes-apply-the-change-via-the-css-variables-used-by-tailwind-background-and-any-directly-related-surface-tokens-such-as-card-popover-border-input-and-ring-in-frontend-src-index-css-ensuring-foreground-text-contrast-remains-readable",
+      "featureTitle": "Update the global theme color tokens so the entire app background uses a bright magenta color instead of the current bright cyan, in both light and dark modes. Apply the change via the CSS variables used by Tailwind (`--background` and any directly related surface tokens such as `--card`, `--popover`, `--border`, `--input`, and `--ring`) in `frontend/src/index.css`, ensuring foreground/text contrast remains readable.",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

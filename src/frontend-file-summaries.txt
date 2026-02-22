@@ -1,0 +1,6 @@
+{
+  "frontend/src/index.css": "Global styles with bright magenta OKLCH background color (hue 325) applied via the --background CSS variable for both light and dark modes, with high-contrast dark text in light mode and light text in dark mode for readability.",
+  "frontend/src/App.tsx": "Main application component that renders the YellowSunrisePage as the root view.",
+  "frontend/src/pages/YellowSunrisePage.tsx": "Complete single-page informational experience about sunrise variations with explicit bg-background class on root container, featuring hero image, underwater and Arctic sections with generated images, detailed content cards, and key takeaways list.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme settings including Inter font family and consistent design tokens."
+}

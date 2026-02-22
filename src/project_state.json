@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 59,
+  "summary": "ICP dapp scaffold with Motoko backend and React (Vite) + shadcn/ui frontend; Internet Identity integration; \"Yellow Sunrise\" page; app-wide background change requested to bright magenta (pending update).",
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Motoko backend canister scaffold",
+      "synonyms": [
+        "backend canister",
+        "motoko backend"
+      ],
+      "description": "Core Motoko backend canister added with DID typings and frontend bindings (backend.did, generated declarations, actor wiring).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "React (Vite) frontend scaffold with shadcn/ui component library",
+      "synonyms": [
+        "frontend scaffold",
+        "shadcn ui"
+      ],
+      "description": "Frontend initialized with Vite + React + Tailwind and a bundled shadcn/ui component set for rapid UI development.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Internet Identity authentication integration",
+      "synonyms": [
+        "II auth",
+        "Internet Identity"
+      ],
+      "description": "Client-side hooks/utilities added to authenticate with Internet Identity and create an authenticated canister actor.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "Initial \"Yellow Sunrise\" page and app wiring",
+      "synonyms": [
+        "initial page",
+        "YellowSunrisePage"
+      ],
+      "description": "Initial application page/component created and wired into the app entrypoint, with associated styling and assets.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Build/deploy template and workspace tooling",
+      "synonyms": [
+        "build template",
+        "pnpm workspace",
+        "deploy scripts"
+      ],
+      "description": "Project includes build-template (Dockerfile, deploy script, canister configs) and pnpm workspace/tooling to support building and deployment.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "Black app-wide background styling",
+      "synonyms": [
+        "black background",
+        "app background color"
+      ],
+      "description": "Updated global/app-level styling so the entire page/app background is black (superseding the prior green background styling).",
+      "reqIds": [
+        "AR-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-global-theme-color-tokens-so-the-entire-app-background-uses-a-bright-magenta-color-instead-of-the-current-bright-cyan-in-both-light-and-dark-modes-apply-the-change-via-the-css-variables-used-by-tailwind-background-and-any-directly-related-surface-tokens-such-as-card-popover-border-input-and-ring-in-frontend-src-index-css-ensuring-foreground-text-contrast-remains-readable",
+      "title": "Update the global theme color tokens so the entire app background uses a bright magenta color instead of the current bright cyan, in both light and dark modes. Apply the change via the CSS variables used by Tailwind (`--background` and any directly related surface tokens such as `--card`, `--popover`, `--border`, `--input`, and `--ring`) in `frontend/src/index.css`, ensuring foreground/text contrast remains readable.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-2",
+      "summary": "Change the entire app/page background color to bright_magenta.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architecturalNotes": [
+    "Project organized as an ICP dapp with a Motoko backend canister and a Vite+React frontend, with generated DID typings used by the frontend actor.",
+    "Frontend uses Tailwind + shadcn/ui components; lint rules include constraints around BigInt query keys and Internet Identity provider usage.",
+    "Build template and scripts include image resize/prune utilities and deployment configuration (icp.yaml, canister.yaml, deploy.sh).",
+    "Build-template and core infrastructure were updated across backend/frontend scaffolding files (Motoko main.mo, Vite+React+shadcn/ui template, lint rules, and deploy configs), reflecting a template/component version refresh (core-infrastructure:v1.0.2, shadcn-ui:v1.0.0, build-template-react:v1.0.0, initial-app:v1.0.0, github-export-icp-cli:v1.0.0)."
+  ],
+  "knownIssues": [],
+  "isFixRequest": false,
+  "generatedImages": [
+    {
+      "filename": "frontend/public/assets/generated/yellow-sunrise-hero.dim_1600x600.png",
+      "description": "Generated hero banner image for Yellow Sunrise page.",
+      "targetWidth": 1600,
+      "targetHeight": 600
+    },
+    {
+      "filename": "frontend/public/assets/generated/yellow-sunrise-arctic.dim_1200x800.png",
+      "description": "Generated background/illustration image variant (arctic).",
+      "targetWidth": 1200,
+      "targetHeight": 800
+    },
+    {
+      "filename": "frontend/public/assets/generated/yellow-sunrise-underwater.dim_1200x800.png",
+      "description": "Generated background/illustration image variant (underwater).",
+      "targetWidth": 1200,
+      "targetHeight": 800
+    }
+  ],
+  "projectName": "Change app-wide background color to bright magenta",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0,
+  "requiresBackendChanges": false,
+  "requiresFrontendChanges": true
+}

@@ -1,0 +1,15 @@
+{
+  "backend/main.mo": "Minimal Motoko canister entry point defining an empty actor with no methods.",
+  "feature_evidence.json": "Feature evidence report documenting a UI change to switch global theme background colors to bright magenta via Tailwind CSS variables, with high confidence.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing key frontend files, including global styles, main app component, page content, and Tailwind configuration.",
+  "frontend/index.css": "Legacy/global Tailwind CSS base layer defining extensive OKLCH color tokens for light and dark themes, including background, card, sidebar, and chart variables.",
+  "frontend/index.html": "HTML entry document that mounts the React app to a root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component that renders the YellowSunrisePage as the entire application.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and caches a backend canister actor using React Query, recreating it when the Internet Identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Authentication context and provider managing Internet Identity login, logout, persisted identities, and login status state.",
+  "frontend/src/index.css": "Global Tailwind CSS styles defining a bright magenta OKLCH color theme for light and dark modes with readable foreground contrast.",
+  "frontend/src/main.tsx": "React entry point that initializes React Query, Internet Identity provider, imports global styles, and renders the App.",
+  "frontend/src/pages/YellowSunrisePage.tsx": "Single-page informational React view about sunrise phenomena, composed of themed sections, cards, icons, and images using Tailwind and shadcn UI.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration enabling class-based dark mode, OKLCH color tokens via CSS variables, custom fonts, animations, and plugins.",
+  "project_state.json": "Tracks overall project metadata and state for an ICP dapp with Motoko backend and Vite+React (shadcn/ui) frontend, including existing features, pending requests, and architectural notes. Notably documents Internet Identity integration, initial Yellow Sunrise page, build tooling, and a pending/global theme change to bright magenta."
+}

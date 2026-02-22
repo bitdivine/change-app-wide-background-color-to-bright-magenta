@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Change app-wide background color to bright magenta",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the global theme color tokens so the entire app background uses a bright magenta color instead of the current bright cyan, in both light and dark modes. Apply the change via the CSS variables used by Tailwind (`--background` and any directly related surface tokens such as `--card`, `--popover`, `--border`, `--input`, and `--ring`) in `frontend/src/index.css`, ensuring foreground/text contrast remains readable.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change the background colour to bright_magenta"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In light mode, the page/body background renders as bright magenta (not cyan) across the app.",
+        "In dark mode, the page/body background renders as a magenta-themed dark variant (not cyan) across the app.",
+        "Text and key UI surfaces (cards/popovers) remain clearly readable against the new magenta background (no low-contrast foreground)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under `frontend/src/components/ui` (compose them only).",
+    "Do not change any files listed in `frontend.immutablePaths` from SYSTEM_CONTEXT.",
+    "Backend must remain single-actor; no backend changes are required for this request."
+  ],
+  "nonGoals": [
+    "Adding new pages or features beyond the background/theme color change",
+    "Changing authentication behavior (Internet Identity)",
+    "Generating or editing images"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

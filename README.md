@@ -1,2 +1,3 @@
-# change-app-wide-background-color-to-bright-magenta
-Exported from Caffeine project: Change app-wide background color to bright magenta
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

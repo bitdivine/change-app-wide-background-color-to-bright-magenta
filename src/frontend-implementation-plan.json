@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Switch global background theme from bright cyan to bright magenta",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update global CSS variable color tokens so app background and related surfaces use a bright magenta theme in both light and dark modes while preserving readable contrast.",
+      "acceptanceCriteria": [
+        "In light mode, the page/body background renders as bright magenta (not cyan) across the app.",
+        "In dark mode, the page/body background renders as a magenta-themed dark variant (not cyan) across the app.",
+        "Text and key UI surfaces (cards/popovers) remain clearly readable against the new magenta background (no low-contrast foreground)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace the current cyan OKLCH tokens with a magenta-based palette for both :root (light) and .dark (dark), updating `--background` and directly related surface tokens (`--card`, `--popover`, `--border`, `--input`, `--ring`) plus any necessary foreground counterparts (`--foreground`, `--card-foreground`, `--popover-foreground`) to maintain strong contrast/readability. Ensure the Tailwind CSS variable contract remains intact (these variables are consumed by Tailwind theme colors and shadcn-ui styling); verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}
